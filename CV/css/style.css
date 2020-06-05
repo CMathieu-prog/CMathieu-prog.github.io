@@ -91,7 +91,7 @@
 
 
 .img {
-    background-image: url("../image/img.png");
+    background-image: url("../image/img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -234,10 +234,6 @@ i {
 
 }
 
-.contact {
-
-
-}
 
 .pdf {
     color: black;
