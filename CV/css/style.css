@@ -229,6 +229,10 @@ i {
     font-size: 2rem;
 }
 
+.telicon{
+    font-size:2em;
+}
+
 .social-icons > a:hover {
     color: #824027;
 
