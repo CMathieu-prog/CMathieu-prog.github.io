@@ -1,0 +1,318 @@
+
+
+@media (min-width: 992px) and (max-width: 1400px) {
+
+    #sidebar {
+
+        width: 17rem !important;
+    }
+
+
+}
+.wrapper {
+    width: 100%;
+}
+
+
+#sidebar {
+    z-index: 1;
+    height: 100%;
+    /*position: fixed;*/
+    width: 20rem;
+    background-color: #536976;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -18.75rem;
+}
+
+#sidebar .logo {
+    display: block;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 0 auto;
+}
+
+#sidebar .logo span {
+    display: block;
+}
+
+#sidebar ul.components {
+    padding: 0;
+}
+
+#sidebar ul li {
+    font-size: 1rem;
+}
+
+#sidebar ul li > ul {
+    margin-left: 10.625rem;
+}
+
+#sidebar ul li > ul li {
+    font-size: 0.875rem;
+}
+
+#sidebar ul li a {
+    padding: 0.625rem 0;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*Changement de couleur au passage de la souris*/
+#sidebar ul li a:hover {
+    color: #f8b739;
+}
+
+#sidebar ul li.active > a {
+    background: transparent;
+    color: #f8b739;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+.content {
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+.img {
+    background-image: url("../image/img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fond {
+
+    width: 100%;
+    height: 100vh;
+    background-image: url("../image/dev.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.presentation {
+    background-color: #383d41;
+    opacity: 0.9;
+    color: white;
+}
+
+.presentation btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.0625rem;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 0.1875rem;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 0.625rem;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.10s;
+    border: 0.125rem solid #e2af75;
+
+}
+
+#Expériences, #Formation, #Compétences {
+
+}
+
+section.resume-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    max-width: 75rem;
+}
+
+.bg-primary {
+    background-color: #BD5D38 !important;
+}
+
+.text-primary {
+    color: #BD5D38 !important;
+}
+
+
+a:hover, a:focus, a:active {
+    color: #824027;
+}
+
+body {
+    font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+}
+
+.subheading {
+    font-weight: 500;
+    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #868e96;
+}
+
+.subheading > a, .subheading > a:hover {
+
+    color: #824027;
+
+}
+
+.h1desc {
+    font-size: 6rem;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+}
+
+p.lead {
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+i {
+    font-size: 3em;
+
+}
+
+.social-icons > a, .social-icons > div > a, .navbar-brand {
+
+
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 100%;
+    color: white;
+
+}
+
+.social-icons > button {
+
+
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 100%;
+    color: white;
+
+}
+
+.icon {
+    border-radius: 100%;
+    color: black;
+}
+
+.icon > i {
+
+    font-size: 2rem;
+}
+
+.telicon{
+    font-size:2em;
+}
+
+.social-icons > a:hover {
+    color: #824027;
+
+}
+
+
+.pdf {
+    color: black;
+    font-size: 0.8rem;
+}
+
+.descexp > li {
+    list-style-type: none;
+}
+
+.descexp > li:before {
+
+    content: "- ";
+
+}
+
+.content h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #BD5D38 !important;
+}
+
+.front, .back {
+    background: black;
+}
+
+.front > .graduation, .back > .graduation {
+    background: #ffbc39 !important;
+
+}
+
+.fa-car {
+    font-size: 1.2em;
+}
+
+.portfolio-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.portfolio-item .portfolio-item-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    background-color: rgba(189, 93, 56, 0.9);
+}
+
+.portfolio-item .portfolio-item-caption:hover {
+    opacity: 1;
+}
+
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+    font-size: 1.5rem;
+}
+
+.portfolio-modal .portfolio-modal-title {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+
+.portfolio-modal .close {
+    position: absolute;
+    z-index: 1;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 0.5rem;
+    line-height: 3rem;
+    color: #c2af89;
+    opacity: 1;
+}
+
+
