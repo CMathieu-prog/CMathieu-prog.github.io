@@ -27,6 +27,6 @@ $(document).ready(function() {
       $(this).removeClass("active");
     }
     $(this).addClass("active");
-    });
+    
 });
 
