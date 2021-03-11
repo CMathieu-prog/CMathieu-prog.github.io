@@ -1,0 +1,126 @@
+
+
+.port-head-cont{
+    margin:20px auto 40px auto;
+    text-align: center;
+}
+
+.port-head-cont button{
+    margin:5px 2px;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+.btn-general {
+    background-color: transparent;
+    text-align: center;
+    border-width: 1px;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #f8b739;
+}
+
+.btn-general:hover, .btn-general:focus {
+
+    background-color: #BD5D38;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.portfolio-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    border-radius: .5rem;
+    overflow: hidden;
+    height: 230px ;
+}
+
+.portfolio-item .portfolio-item-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .7s ease-in-out;
+    opacity: 0;
+    
+}
+
+.portfolio-item .portfolio-item-caption:hover {
+    opacity: 1;
+}
+
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+    font-size: 1.5rem;
+}
+
+.portfolio-modal .portfolio-modal-title {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+
+
+
+
+.exophp:hover
+{
+    background-image: url("../image/code_exoPHP.PNG");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.exojs:hover
+{
+    background-image: url("../image/code_exoJS.PNG");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.velvetphp:hover
+{
+    background-image: url("../image/code_velvetPHP.PNG");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.legophp:hover
+{
+    background-image: url("../image/code_lego.PNG");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.javatext
+{
+    /* margin-top:82.499px; */
+}
+
+.exocpp:hover
+{
+    background-image: url("../image/code_cpp.PNG");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.front, .back {
+    background: #844127;
+}
+
+.now
+{
+    position:absolute;
+    top: 0px;
+    left: 282px;
+}
+
+.img-modal:hover
+{
+    transform: scale(1.2);
+}

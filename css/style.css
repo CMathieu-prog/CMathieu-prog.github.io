@@ -18,12 +18,13 @@
     z-index: 1;
     height: 100%;
     /*position: fixed;*/
-    width: 18%;
+    width: 20rem;
     background-color: #536976;
     color: #fff;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    background-color: #BD5D38;
 }
 
 #sidebar.active {
@@ -62,6 +63,7 @@
     display: block;
     color: rgba(255, 255, 255, 0.8);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
 }
 
 /*Changement de couleur au passage de la souris*/
@@ -95,6 +97,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
 }
 
 .fond {
@@ -132,18 +135,12 @@
 
 }
 
-#Expériences, #Formation, #Compétences {
 
-}
 
 section.resume-section {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
     max-width: 75rem;
-}
-
-.bg-primary {
-    background-color: #BD5D38 !important;
 }
 
 .text-primary {
@@ -262,57 +259,15 @@ i {
 }
 
 .front, .back {
-    background: black;
+    background: #844127;
 }
 
-.front > .graduation, .back > .graduation {
-    background: #ffbc39 !important;
 
-}
-
-.fa-car {
+.fa-car, .fa-mobile-alt {
     font-size: 1.2em;
 }
 
-.portfolio-item {
-    cursor: pointer;
-    position: relative;
-    display: block;
-    border-radius: .5rem;
-    overflow: hidden;
+
+em{
+    font-size: 2rem;
 }
-
-.portfolio-item .portfolio-item-caption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .2s ease-in-out;
-    opacity: 0;
-    background-color: rgba(189, 93, 56, 0.9);
-}
-
-.portfolio-item .portfolio-item-caption:hover {
-    opacity: 1;
-}
-
-.portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
-    font-size: 1.5rem;
-}
-
-.portfolio-modal .portfolio-modal-title {
-    font-size: 2.25rem;
-    line-height: 2rem;
-}
-
-.portfolio-modal .close {
-    position: absolute;
-    z-index: 1;
-    right: 1.5rem;
-    top: 1rem;
-    font-size: 0.5rem;
-    line-height: 3rem;
-    color: #c2af89;
-    opacity: 1;
-}
-
-

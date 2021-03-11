@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portefolio.css">
     <link rel="stylesheet" href="css/animBtn.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
 
 <body>
 <div class="container-fluid m-0 p-0">
     <!--      Nav Ecran Large-->
-    <nav id="sidebar" class="navbar  bg-primary fixed-top d-none d-lg-block d-xl-block">
+    <nav id="sidebar" class="navbar fixed-top d-none d-lg-block d-xl-block" aria-label="sidebar">
 
 
         <div class=" p-4 pt-5">
@@ -25,11 +26,13 @@
             <div class="text-center">
                 <h2 class="mb-0">Couret Mathieu</h2>
                 <h5 class="mb-0">27 ans</h5>
-                <i class="fas fa-car"> Permis B</i>
+                <em class="fas fa-mobile-alt mb-0"> 0658929433</em><br>
+                <em class="fas fa-car mb-0"> Permis B</em>
+                
             </div>
 
             <ul class="list-unstyled components mt-5 mb-5 " id="menu">
-                <li class="active ">
+                <li class="active">
                     <a href="#Accueil" class="" id="navacc">Accueil</a>
                 </li>
                 <li>
@@ -56,15 +59,20 @@
             <div class="contact">
                 <p class="">Contactez-moi : </p>
 
-                <div class="social-icons mb-5 ">
+                <div class="social-icons mb-3 ">
 
-                    <a class="git mr-3" href="https://github.com/Menthealeau" target="_blank"><i
-                            class="fab fa-github-square"> </i></a>
-                    <a href="https://www.linkedin.com/in/m-couret/" target="_blank" class="mr-3"> <i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="mailto:mathieu.couret@laposte.net" class="mr-3"><i class="far fa-envelope"></i></a>
-                    <a href="image/CV.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+                    <a class="git mr-3" href="https://github.com/Menthealeau" target="_blank"><em
+                            class="fab fa-github-square"> </em></a>
+                    <a href="https://www.linkedin.com/in/m-couret/" target="_blank" class="mr-3"> <em
+                            class="fab fa-linkedin"></em></a>
+                    <a href="mailto:mathieu.couret@laposte.net" class="mr-3"><em class="far fa-envelope"></em></a>
+                    
                 </div>
+            </div>
+
+            <div class="social-icons">
+                <p>Telecharger mon CV : </p>
+                <a href="image/CV_Couret_Mathieu_0321.pdf" download><em class="fa fa-file-pdf-o center" aria-hidden="true"></em></a>
             </div>
 
 
@@ -74,7 +82,7 @@
     </nav>
     <!-- Fin nav ecran large   -->
     <!-- Debut Reponsive nav   -->
-    <nav class="navbar  d-block d-lg-none d-xl-none fixed-top bg-primary ">
+    <nav class="navbar  d-block d-lg-none d-xl-none fixed-top bg-primary " aria-label="nav">
 
             <div class="row ">
                 <div class="col-12" id="navbar10">
@@ -92,18 +100,21 @@
                 <div class="col-12">
                     <div class="row social-icons text-right mt-1">
                         <div class="col-12">
-                            <a class="git " href="https://github.com/Menthealeau" target="_blank"><i
-                                    class="fab fa-github-square telicon"> </i></a>
-                            <a href="https://www.linkedin.com/in/m-couret/" target="_blank" class=""> <i
-                                    class="fab fa-linkedin telicon"></i></a>
-                            <a href="mailto:mathieu.couret@laposte.net" class=""><i class="far fa-envelope telicon"></i></a>
-                            <a href="image/CV.pdf" download><i class="fa fa-file-pdf-o telicon" aria-hidden="true"></i></a>
+                            <a class="git " href="https://github.com/Menthealeau" title ="mon git" target="_blank"><em
+                                    class="fab fa-github-square telicon"> </em></a>
+                            <a href="https://www.linkedin.com/in/m-couret/" target="_blank" class=""> <em
+                                    class="fab fa-linkedin telicon"></em></a>
+                            <a href="mailto:mathieu.couret@laposte.net" class=""><em class="far fa-envelope telicon"></em></a>
+                            <a href="image/CV_Couret_Mathieu_0321.pdf" download><em class="fa fa-file-pdf-o telicon" aria-hidden="true"></em></a>
 
                         </div>
+
+            
 
 
                     </div>
                 </div>
+               
             </div>
     </nav>
 
@@ -209,27 +220,28 @@
                     <div class="col-5  text-white pt-3 pb-3 pr-3 front">
                         <h3 class="text-center">Langages</h3>
                         <div class="row ml-2">
-                            <i class="fab fa-js"></i><h4 class="pt-3 ml-2"> JavaScript</h4>
-                            <i class="fab fa-html5 ml-4"></i><h4 class="pt-3 ml-2">HTML 5</h4>
-                            <i class="fab fa-css3-alt ml-4"></i> <h4 class="pt-3 ml-2">CSS 3</h4>
+                            <em class="fab fa-js"></em><h4 class="pt-3 ml-2"> JavaScript</h4>
+                            <em class="fab fa-html5 ml-4"></em><h4 class="pt-3 ml-2">HTML 5</h4>
+                            <em class="fab fa-css3-alt ml-4"></em> <h4 class="pt-3 ml-2">CSS 3</h4>
                         </div>
                         <div class="row ml-2 mt-3">
-                            <i class="fab fa-php"></i><h4 class="pt-3 ml-2"> PHP</h4>
-                            <i class="fas fa-database ml-4"></i> <h4 class="pt-3 ml-2"> SQL </h4>
-                            <i class="fab fa-java ml-4"></i> <h4 class="pt-3 ml-2"> Java </h4>
+                            <em class="fab fa-php"></em><h4 class="pt-3 ml-2"> PHP</h4>
+                            <em class="fas fa-database ml-4"></em> <h4 class="pt-3 ml-2"> SQL </h4>
+                            <em class="fab fa-java ml-4"></em> <h4 class="pt-3 ml-2"> Java </h4>
+                            <em class="fab fa-cuttlefish ml-4">++</em>
                         </div>
 
                     </div>
                     <div class="col-5 offset-2 text-white pull-right pt-3 pb-3  back">
                         <h3 class="text-center">Framework</h3>
                         <div class="row ml-2">
-                            <i class="fab fa-bootstrap"></i><h4 class="pt-3 ml-2">Bootstrap</h4>
-                            <i class="fab fa-vuejs ml-4"></i> <h4 class="pt-3 ml-2">Vue JS</h4>
-                            <i class="fab fa-symfony ml-4"></i> <h4 class="pt-3 ml-2">Symfony 4</h4>
+                            <em class="fab fa-bootstrap"></em><h4 class="pt-3 ml-2">Bootstrap</h4>
+                            <em class="fab fa-vuejs ml-4"></em> <h4 class="pt-3 ml-2">Vue JS</h4>
+                            <em class="fab fa-symfony ml-4"></em> <h4 class="pt-3 ml-2">Symfony 4</h4>
                         </div>
                         <div class="row ml-2 mt-3">
-                            <i class="fab fa-java "></i> <h4 class="pt-3 ml-2"> JavaFX </h4>
-                            <i class="fab fa-wordpress ml-4"></i>  <h4 class="pt-3 ml-2">Wordpress </h4>
+                            <em class="fab fa-java "></em> <h4 class="pt-3 ml-2"> JavaFX </h4>
+                            <em class="fab fa-wordpress ml-4"></em>  <h4 class="pt-3 ml-2">Wordpress </h4>
 
                         </div>
                     </div>
@@ -238,8 +250,9 @@
                     <div class="col-5  text-white pt-5 pb-3 pr-3 front">
                         <h3 class="text-center">Outils</h3>
                         <div class="row ml-2">
-                            <i class="far fa-file-code"></i><h4 class="pt-3 ml-2"> IntelliJ</h4>
-                            <i class="fab fa-github ml-4"></i><h4 class="pt-3 ml-2"> Github</h4>
+                            <em class="far fa-file-code"></em><h4 class="pt-3 ml-2"> IntelliJ</h4>
+                            <em class="far fa-file-code ml-3"></em><h4 class="pt-3 ml-2"> Visual studio / Code</h4>
+                            <em class="fab fa-github ml-4"></em><h4 class="pt-3 ml-2"> Github</h4>
 
                         </div>
 
@@ -463,48 +476,65 @@
         <section class="resume-section p-3 p-lg-5 d-flex justify-content-center content" id="Portefolio">
             <div class="w-100">
                 <h2 class="mb-5">Portefolio</h2>
+                <div class="port-head-cont text-center mb-3">
+                    <button class="btn btn-general filter-b" data-filter="all">Tous</button>
+                    <button class="btn btn-general filter-b" data-filter="web">Web</button>
+                    <button class="btn btn-general filter-b" data-filter="mobile">Mobile</button>
+                    <button class="btn btn-general filter-b" data-filter="app">Application</button>
+                  </div>
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="row">
-                        <!-- Portfolio Items-->
-                        <div class="col-6  ">
-                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i
-                                            class="fas fa-plus fa-3x"></i></div>
+                        
+                        <div class="col-4 mb-2  ">
+                            <div class="portfolio-item  mx-auto filter web" data-toggle="modal" data-target="#portfolioModal0">
+                                <div class="exojs portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white "><em
+                                            class="fas fa-plus fa-2x"></em></div>
                                 </div>
 
                                 <img class="img-fluid" src="image/FormJava.png" alt="JavaScript"/>
-                                <h3 class="text-center mt-1">Exercices apprentissage JavaScript</h3>
+                                <h3 class="text-center javatext">Exercices apprentissage JavaScript</h3>
                             </div>
                         </div>
-                        <div class="col-6 mb-5">
-                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i
-                                            class="fas fa-plus fa-3x"></i></div>
+                        <div class="col-4 mb-2">
+                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                                <div class="exophp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white "><em
+                                        class="fas fa-plus fa-2x"></em></div>
                                 </div>
                                 <img class="img-fluid" src="image/exoPHP.png" alt="Velvet Music"/>
                                 <h3 class="text-center mt-1">Exercices apprentissage PHP</h3>
                             </div>
                         </div>
-                        <div class="col-6 ">
-                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i
-                                            class="fas fa-plus fa-3x"></i></div>
+                        <div class="col-4 ">
+                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                                <div class="velvetphp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><em
+                                            class="fas fa-plus fa-2x"></em></div>
                                 </div>
                                 <img class="img-fluid" src="image/PHPVelvet.png" alt="Velvet Music"/>
                                 <h3 class="text-center mt-1">Exercices PHP projet Velvet Music</h3>
                             </div>
                         </div>
-                        <div class="col-6 ">
-                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i
-                                            class="fas fa-plus fa-3x"></i></div>
+                        <div class="col-4 ">
+                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                                <div class="legophp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><em
+                                            class="fas fa-plus fa-2x"></em></div>
                                 </div>
                                 <img class="img-fluid" src="image/lego.png" alt="Velvet Music"/>
                                 <h3 class="text-center mt-1">Projet Final Fil Rouge (partie WEB) </h3>
+
+                            </div>
+                        </div>
+                        <div class="col-4 ">
+                            <div class="portfolio-item  mx-auto filter app" data-toggle="modal" data-target="#portfolioModal4">
+                                <div class="exocpp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><em
+                                            class="fas fa-plus fa-2x"></em></div>
+                                </div>
+                                <img class="img-fluid" src="image/exoCPP.PNG" alt="Velvet Music"/>
+                                <h3 class="text-center mt-1">Exercices apprentissage C++ autodidacte <span class="badge badge-success now">En cours</span></h3>
 
                             </div>
                         </div>
@@ -521,7 +551,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-body">
-                        <img src="image/FormJava.png" alt="exercices JavaScript" class="img-fluid">
+                        <img src="image/FormJava.png" alt="exercices JavaScript" class="img-fluid img-modal">
                         <div class="text-center">
                             <p>Plusieurs exercices afin d'apprendre le JavaScript , (Conditionnelles, boucles, tableaux
                                 )</p>
@@ -543,7 +573,7 @@
             <div class="modal-dialog modal-lg " role="document">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-body">
-                        <img src="image/yGnplOkSXf.gif" alt="exercices PHP" class="img-fluid">
+                        <img src="image/yGnplOkSXf.gif" alt="exercices PHP" class="img-fluid img-modal">
                         <div class=" mt-3 ml-1">
                             <ul class="list-unstyled">
                                 <li class="h5">Projet : Création d'un site de présentation de vinyles</li>
@@ -571,11 +601,11 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-body mb-0 p-0">
-                        <img src="image/presentation.gif" alt="exercices PHP" class="img-fluid">
+                        <img src="image/presentation.gif" alt="exercices PHP" class="img-fluid img-modal">
                         <div class=" mt-3 ml-1">
-                            <span class="badge badge-success">En cours</span>
                             <ul class="list-unstyled mt-2">
                                 <li class="h5">Projet : Création d'un site E-Commerce en groupe</li>
+                                <li>Rôle: Chef de projet </li>
                                 <li>Langages : PHP POO (Symfony 4.4.8), CSS (Bootstrap), JS</li>
                                 <li>Fonctionnalitées : CRUD , Session , Panier , Réglement , Mail, PDF</li>
                             </ul>
@@ -598,7 +628,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-body">
-                        <img src="image/exoPHP.png" alt="exercices PHP" class="img-fluid">
+                        <img src="image/exoPHP.png" alt="exercices PHP" class="img-fluid img-modal">
                         <div class="text-center">
                             <p>Plusieurs exercices afin d'apprendre le PHP , (Conditionnelles, boucles, tableaux
                                 ....)</p>
@@ -613,6 +643,8 @@
             </div>
         </div>
         <!-- Fin modal projet: Exercice PHP -->
+
+        <!-- TODO : modal C++ apprentissage -->
     </section>
 
 </div>
