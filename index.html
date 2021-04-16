@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/portefolio.css">
+    <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/animBtn.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/mobile.css">
 
 <body>
 <div class="container-fluid m-0 p-0">
@@ -22,13 +24,9 @@
 
 
         <div class=" p-4 pt-5">
-            <a href="#" class="img logo rounded-circle mb-1"></a>
             <div class="text-center">
                 
-                <h2 class="mb-0">Couret Mathieu</h2>
-                <h5 class="mb-0">27 ans</h5>
-                <em class="fas fa-mobile-alt mb-0"> 0658929433</em><br>
-                <em class="fas fa-car mb-0"> Permis B</em>
+                <h1 class="mb-0">Couret Mathieu</h1>
                 
             </div>
 
@@ -37,22 +35,13 @@
                     <a href="#Accueil" class="" id="navacc">Accueil</a>
                 </li>
                 <li>
-                    <a href="#Description" id="navdesc">Description</a>
+                    <a href="#Portfolio" id="navpf">Portfolio</a>
                 </li>
                 <li>
-                    <a href="#Compétences" id="navcomp">Compétences</a>
+                    <a href="#Parcours" id="navdesc">Parcours</a>
                 </li>
                 <li>
-                    <a href="#Technologies" id="navtech">Technologies</a>
-                </li>
-                <li>
-                    <a href="#Expériences" id="navexp">Expériences</a>
-                </li>
-                <li>
-                    <a href="#Formation" id="navform">Formation</a>
-                </li>
-                <li>
-                    <a href="#Portefolio" id="navpf">Portfolio</a>
+                    <a href="#CV" id="navcomp">CV</a>
                 </li>
 
 
@@ -90,48 +79,40 @@
     </nav>
     <!-- Fin nav ecran large   -->
     <!-- Debut Reponsive nav   -->
-    <nav class="navbar  d-block d-lg-none d-xl-none fixed-top bg-primary " aria-label="nav">
-
-            <div class="row ">
-                <div class="col-12" id="navbar10">
-                    <div class="navbar-nav">
-                        <div class="row social-icons">
-                            <div class="mx-auto"><a href="#Compétences">Compétences</a></div>
-                            <div class="mx-auto "><a href="#Technologies">Technologies</a></div>
-                            <div class="mx-auto"><a href="#Expériences">Expériences</a></div>
-                            <div class="mx-auto"><a href="#Formation">Formation</a></div>
-                            <div class="mx-auto"><a href="#Portefolio">Portfolio</a></div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="row social-icons text-right mt-1">
-                        <div class="col-12">
-                            <a class="git " href="https://github.com/Menthealeau" title ="mon git" target="_blank"><em
-                                    class="fab fa-github-square telicon"> </em></a>
-                            <a href="https://www.linkedin.com/in/m-couret/" target="_blank" class=""> <em
-                                    class="fab fa-linkedin telicon"></em></a>
-                            <a href="mailto:mathieu.couret@laposte.net" class=""><em class="far fa-envelope telicon"></em></a>
-                            <a href="image/CV_Couret_Mathieu_0321.pdf" download><em class="fa fa-file-pdf-o telicon" aria-hidden="true"></em></a>
-
-                        </div>
-
-            
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Couret Mathieu</h5>
+          <ul class="list-unstyled components mt-2 mb-5 " id="menu">
+            <li class="active">
+                <a href="#Accueil" class="" id="navacc">Accueil</a>
+            </li>
+            <li>
+                <a href="#Portfolio" id="navpf">Portfolio</a>
+            </li>
+            <li>
+                <a href="#Parcours" id="navdesc">Parcours</a>
+            </li>
+            <li>
+                <a href="#CV" id="navcomp">CV</a>
+            </li>
 
 
-                    </div>
-                </div>
-               
-            </div>
-    </nav>
+        </ul>
+        </div>
+    </div>
+      <nav class="navbar navbar-dark bg-dark d-block d-lg-none d-xl-none">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
 
     <!-- Fin Reponsive nav   -->
 
     <section id="Accueil" class=" col-lg-9 col-xl-10 offset-xl-2 col-sm-12 col-md-12 offset-lg-3  content">
 
-        <div class="col-12 d-none d-lg-block d-xl-block fond">
-            <div class="row h-100 justify-content-center align-items-center">
+        <div  class="col-12 d-none d-lg-block d-xl-block fond">
+            <div id='fond' class="row h-100 justify-content-center align-items-center">
                 <div class="col-6 rounded presentation ">
                     <div class="text-center mt-3">
                         <h4>Développeur Web & Web Mobile</h4>
@@ -139,427 +120,358 @@
                         <div class="svg-wrapper">
                             <svg height="60" width="320">
                                 <rect class="shape"/>
-                                <div class="text" id="anim"><a href="#Description">Entrez</a></div>
+                                <div class="text" id="anim"><a href="#Portfolio">Entrez</a></div>
                             </svg>
                         </div>
 
                     </div>
                 </div>
+
             </div>
         </div>
-        <div id="Description" class="col-12 content">
-            <section class="resume-section p-3 p-lg-5 d-flex align-items-center">
-                <div class="w-100">
-                    <h1 class="h1desc mb-0">Couret
-                        <span class="text-primary">Mathieu</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        51 Rue des jacobins · 80000 Amiens ·
-                        <a href="mailto:mathieu.couret@laposte.net">mathieu.couret@laposte.net</a>
-                    </div>
-                    <p class="lead mb-5">Diplômé d'un BTS SIO option SLAM (Solution Logicielles et Application Métiers), je viens récemment d'approfondir mes
-                        compétences en suivant une formation de concepteur développeur d'applications.
-                        Je suis actuellement à la recherche d'un poste de Développeur dans les Hauts-de-France.<br><br>
-
-                        Je dispose d'une première expérience dans une société de services dans le domaine du batiment.<br><br>
-
-                        Flexible,sérieux,motivé et passionné par la programmation, je suis capable de travailler aussi bien en équipe que de manière indépendante.
-                        <br><br>
-                        Je reste à votre disposition pour tout complément d’information sur ma candidature.
-                        <br><br>
-
-                        Je serai également réactif pour toute demande d’entretien par visio ou au sein de vos
-                        locaux.
-                        <br><br>
-
-                        N'hésitez pas à me contacter !</p>
-
-
-                </div>
-            </section>
-
-
-        </div>
+       
         <hr class="m-0">
-        <section class="resume-section p-3 p-lg-5  d-flex align-items-center content" id="Compétences">
-            <div class="w-100 container-fluid">
-                <h2 class="mb-5">Compétences</h2>
-                <div class="row">
-                    <div class="col-6 mb-5">
-                        <p class="lead mb-5 text-center subheading ">
-                            Création de bases de données
-                        </p>
-                        <img src="image/MCD.PNG" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-6">
-                        <p class="lead mb-5 text-center subheading ">
-                            Développement d'applications
-                        </p>
-                        <img src="image/dev.PNG" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-6">
-                        <p class="lead mb-5 text-center subheading ">
-                            Développement de site internet
-                        </p>
-                        <img src="image/PHPVelvet.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-6">
-                        <p class="lead mb-2 text-center subheading ">
-                            Respect du cahier des charges
-                        </p>
-                        <img src="image/cdc.PNG" alt="" class="img-fluid">
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <hr class="m-0">
-        <section class="resume-section p-3 p-lg-5 d-flex align-items-center content" id="Technologies">
-            <div class="w-100">
-                <h2 class="mb-5">Technologies</h2>
-
-
-                <div class="row">
-
-                    <div class="col-5  text-white pt-3 pb-3 pr-3 front">
-                        <h3 class="text-center">Langages</h3>
-                        <div class="row ml-2">
-                            <em class="fab fa-js"></em><h4 class="pt-3 ml-2"> JavaScript</h4>
-                            <em class="fab fa-html5 ml-4"></em><h4 class="pt-3 ml-2">HTML 5</h4>
-                            <em class="fab fa-css3-alt ml-4"></em> <h4 class="pt-3 ml-2">CSS 3</h4>
-                        </div>
-                        <div class="row ml-2 mt-3">
-                            <em class="fab fa-php"></em><h4 class="pt-3 ml-2"> PHP</h4>
-                            <em class="fas fa-database ml-4"></em> <h4 class="pt-3 ml-2"> SQL </h4>
-                            <em class="fab fa-java ml-4"></em> <h4 class="pt-3 ml-2"> Java </h4>
-                            <em class="fab fa-cuttlefish ml-4">++</em>
-                        </div>
-
-                    </div>
-                    <div class="col-5 offset-2 text-white pull-right pt-3 pb-3  back">
-                        <h3 class="text-center">Framework</h3>
-                        <div class="row ml-2">
-                            <em class="fab fa-bootstrap"></em><h4 class="pt-3 ml-2">Bootstrap</h4>
-                            <em class="fab fa-vuejs ml-4"></em> <h4 class="pt-3 ml-2">Vue JS</h4>
-                            <em class="fab fa-symfony ml-4"></em> <h4 class="pt-3 ml-2">Symfony 4</h4>
-                        </div>
-                        <div class="row ml-2 mt-3">
-                            <em class="fab fa-java "></em> <h4 class="pt-3 ml-2"> JavaFX </h4>
-                            <em class="fab fa-wordpress ml-4"></em>  <h4 class="pt-3 ml-2">Wordpress </h4>
-
-                        </div>
-                    </div>
-                    <br>
-
-                    <div class="col-5  text-white pt-5 pb-3 pr-3 front">
-                        <h3 class="text-center">Outils</h3>
-                        <div class="row ml-2">
-                            <em class="far fa-file-code"></em><h4 class="pt-3 ml-2"> IntelliJ</h4>
-                            <em class="far fa-file-code ml-3"></em><h4 class="pt-3 ml-2"> Visual studio / Code</h4>
-                            <em class="fab fa-github ml-4"></em><h4 class="pt-3 ml-2"> Github</h4>
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-        <hr class="m-0">
-        <section class="resume-section p-3 p-lg-5 d-flex justify-content-center content" id="Expériences">
-            <div class="w-100">
-                <h2 class="mb-5">Expériences</h2>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content border m-3 p-3">
-                        <h3 class="mb-0">DEVELOPPEUR APPLICATION</h3>
-                        <div class="subheading">SMART JOBSITE</div>
-                        <div class="resume-date mb-3">
-                            <span class="text-primary">JUILLET 2020 - OCTOBRE 2020</span>
-                        </div>
-                        <ul class="descexp ml-0 mr-0">
-                            <li>Création d'un plugin pour Revit </li>
-                            <li>Versionning</li>
-                            <li>Plugin réalisé en C# avec l'API Revit</li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-
-                    <div class="resume-content border m-3 p-3">
-                        <h3 class="mb-0">DEVELOPPEUR WEB</h3>
-                        <div class="subheading">EXCALIBRA</div>
-                        <div class="resume-date mb-3">
-                            <span class="text-primary">JANVIER 2017 - DECEMBRE 2017</span>
-                        </div>
-                        <ul class="descexp ml-0 mr-0">
-                            <li><a href="https://www.lorenederatuld.com/">https://www.lorenederatuld.com/</a></li>
-                            <li><a href="https://selarl-koskas.chirurgiens-dentistes.fr/">https://selarl-koskas.chirurgiens-dentistes.fr/</a>
-                            </li>
-                            <li>Sites réalisés avec le CMS : Wordpress</li>
-                        </ul>
-
-                    </div>
-                    <div class="resume-content border m-3 p-3">
-                        <h3 class="mb-0">DEVELOPPEUR WEB</h3>
-                        <div class="subheading">MADAM’IZA</div>
-                        <div class="resume-date mb-3">
-                            <span class="text-primary">JUIN 2015 - JUILLET 2015</span>
-                        </div>
-                        <ul class="descexp">
-                            <li>Création du site internet</li>
-                            <li>Cahier des charges</li>
-                            <li>Mise en ligne du site</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mt-5">
-
-                    <div class="resume-content border m-3 p-3">
-                        <h3 class="mb-0">ASSISTANT ADMINISTRATIF</h3>
-                        <div class="subheading ">FEELNFOOD</div>
-                        <div class="resume-date mb-3">
-                            <span class="text-primary">AVRIL 2018 - AOUT 2019</span>
-                        </div>
-                        <ul class="descexp">
-                            <li>Facturation</li>
-                            <li>Envois + Suivi des commandes</li>
-                            <li>Mise à jour de la trésorerie</li>
-                            <li>Analyse des chiffres réalisés</li>
-                            <li>Saisie administratif</li>
-                            <li>Création et envois des variables de payes</li>
-                            <li>Accueil standard téléphonique</li>
-                            <li>Réception des colis</li>
-                            <li>Négociation de certains prix Faire les règlements</li>
-
-
-                        </ul>
-
-                    </div>
-                    <div class="resume-content border m-3 p-3">
-                        <h3 class="mb-0">SERVEUR</h3>
-                        <div class="subheading">PIZZA PAI</div>
-                        <div class="resume-date mb-3">
-                            <span class="text-primary">AOUT 2012 - OCTOBRE 2012</span>
-                        </div>
-                        <ul class="descexp">
-                            <li>Contact clientèle</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-        <hr class="m-0">
-        <section class="resume-section p-3 p-lg-5  content" id="Formation">
-            <div class="w-100">
-                <h2 class="mb-5">Formations</h2>
-                <div class="row no-gutters">
-                    <div class="col-sm"> <!--spacer--> </div>
-                    <!-- timeline item 1 center dot -->
-                    <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
-                        <div class="row h-50">
-                            <div class="col">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                        <h5 class="m-2">
-                            <span class="badge badge-pill bg-dark border">&nbsp;</span>
-                        </h5>
-                        <div class="row h-50">
-                            <div class="col border-right">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                    </div>
-                    <!-- timeline item 1 event content -->
-                    <div class="col-sm py-2">
-                        <div class="card  shadow">
-                            <div class="card-body">
-                                <div class="float-right text-primary small">NOVEMBRE 2019 - OCTOBRE 2020</div>
-                                <h4 class="card-title text-muted">FORMATION , AFPA AMIENS</h4>
-                                <p class="card-text">Formation de Concepteur Développeur d'Applications</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--/row-->
-                <!-- timeline item 2 -->
-                <div class="row no-gutters">
-                    <div class="col-sm py-2">
-                        <div class="card  shadow">
-                            <div class="card-body">
-                                <div class="float-right text-primary small">FEVRIER - NOVEMBRE 2017</div>
-                                <h4 class="card-title ">MASTERE , IPSSI PARIS </h4>
-                                <p class="card-text">Master 1 Administrateur du S.I filière Développement web, mobile et
-                                    logiciel</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
-                        <div class="row h-50">
-                            <div class="col border-right">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                        <h5 class="m-2">
-                            <span class="badge badge-pill bg-dark border">&nbsp;</span>
-                        </h5>
-                        <div class="row h-50">
-                            <div class="col border-right">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                    </div>
-                    <div class="col-sm"> <!--spacer--> </div>
-                </div>
-                <!--/row-->
-                <!-- timeline item 3 -->
-                <div class="row no-gutters">
-                    <div class="col-sm"> <!--spacer--> </div>
-                    <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
-                        <div class="row h-50">
-                            <div class="col border-right">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                        <h5 class="m-2">
-                            <span class="badge badge-pill bg-dark border">&nbsp;</span>
-                        </h5>
-                        <div class="row h-50">
-                            <div class="col border-right">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                    </div>
-                    <div class="col-sm py-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-right text-primary small">2016</div>
-                                <h4 class="card-title">BTS SIO , LYCEE SAINT-ASPAIS MELUN </h4>
-                                <p>BTS SIO option SLAM (Solution Logicielles et Application Métiers)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--/row-->
-                <!-- timeline item 4 -->
-                <div class="row no-gutters">
-                    <div class="col-sm py-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-right text-muted small">2013</div>
-                                <h4 class="card-title">BACCALAUREAT , LYCEE SAINT–REMI ROUBAIX</h4>
-                                <p>BAC STG (Sciences et Technologies de la Gestion) option GSI (Gestion des
-                                    Système d’information)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
-                        <div class="row h-50">
-                            <div class="col border-right">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                        <h5 class="m-2">
-                            <span class="badge badge-pill bg-dark border">&nbsp;</span>
-                        </h5>
-                        <div class="row h-50">
-                            <div class="col">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                        </div>
-                    </div>
-                    <div class="col-sm"> <!--spacer--> </div>
-                </div>
-            </div>
-        </section>
-
-        <hr class="m-0">
-
-        <section class="resume-section p-3 p-lg-5 d-flex justify-content-center content" id="Portefolio">
-            <div class="w-100">
-                <h2 class="mb-5">Portefolio</h2>
-                <div class="port-head-cont text-center mb-3">
-                    <button class="btn btn-general filter-b" data-filter="all">Tous</button>
-                    <button class="btn btn-general filter-b" data-filter="web">Web</button>
-                    <button class="btn btn-general filter-b" data-filter="mobile">Mobile</button>
-                    <button class="btn btn-general filter-b" data-filter="app">Application</button>
+        <section class="resume-section p-3 p-lg-5 d-flex justify-content-center content" id="Portfolio" wfd-id="6">
+            <div class="w-100" wfd-id="7">
+                <h2 class="mb-5">Portfolio</h2>
+                <div class="port-head-cont text-center mb-3" wfd-id="31">
+                    <button class="btn btn-general filter-b" data-filter="all" wfd-id="187">Tous</button>
+                    <button class="btn btn-general filter-b" data-filter="web" wfd-id="186">Web</button>
+                    <button class="btn btn-general filter-b" data-filter="mobile" wfd-id="185">Mobile</button>
+                    <button class="btn btn-general filter-b" data-filter="app" wfd-id="184">Application</button>
                   </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="row">
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5" wfd-id="8">
+                    <div class="row" wfd-id="9">
                         
-                        <div class="col-4 mb-2  ">
-                            <div class="portfolio-item  mx-auto filter web" data-toggle="modal" data-target="#portfolioModal0">
-                                <div class="exojs portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white "><em
-                                            class="fas fa-plus fa-2x"></em></div>
+                        <div class="col-md-4 col-lg-4 col-xl-4 col-xs-6 col-sm-6 mb-2  " wfd-id="27">
+                            <div class="portfolio-item  mx-auto filter web" data-toggle="modal" data-target="#portfolioModal0" wfd-id="28" >
+                                <div class="exojs portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" wfd-id="29">
+                                    <div class="portfolio-item-caption-content text-center text-white " wfd-id="30"><em class="fas fa-plus fa-2x"></em></div>
                                 </div>
 
-                                <img class="img-fluid" src="image/FormJava.png" alt="JavaScript"/>
+                                <img class="img-fluid" src="image/FormJava.png" alt="JavaScript">
                                 <h3 class="text-center javatext">Exercices apprentissage JavaScript</h3>
                             </div>
                         </div>
-                        <div class="col-4 mb-2">
-                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                                <div class="exophp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white "><em
-                                        class="fas fa-plus fa-2x"></em></div>
+                        <div class="col-md-4 col-lg-4 col-xl-4 col-xs-6 col-sm-6 mb-2" wfd-id="23">
+                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal1" wfd-id="24" >
+                                <div class="exophp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" wfd-id="25">
+                                    <div class="portfolio-item-caption-content text-center text-white " wfd-id="26"><em class="fas fa-plus fa-2x"></em></div>
                                 </div>
-                                <img class="img-fluid" src="image/exoPHP.png" alt="Velvet Music"/>
+                                <img class="img-fluid" src="image/exoPHP.png" alt="Velvet Music">
                                 <h3 class="text-center mt-1">Exercices apprentissage PHP</h3>
                             </div>
                         </div>
-                        <div class="col-4 ">
-                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                                <div class="velvetphp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><em
-                                            class="fas fa-plus fa-2x"></em></div>
+                        <div class="col-md-4 col-lg-4 col-xl-4 col-xs-6 col-sm-6 mb-2" wfd-id="7">
+                            <div class="portfolio-item  mx-auto filter app" data-toggle="modal" wfd-id="11" >
+                                <div class="exocpp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" wfd-id="13">
+                                    <div class="portfolio-item-caption-content text-center text-white" wfd-id="14"><em class="fas fa-plus fa-2x"></em></div>
                                 </div>
-                                <img class="img-fluid" src="image/PHPVelvet.png" alt="Velvet Music"/>
-                                <h3 class="text-center mt-1">Exercices PHP projet Velvet Music</h3>
+                                <img class="img-fluid" src="image/exoCPP.PNG" alt="Velvet Music">
+                                <h3 class="text-center mt-1">Exercices apprentissage C++ autodidacte </h3>
+
                             </div>
                         </div>
-                        <div class="col-4 ">
-                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                                <div class="legophp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><em
-                                            class="fas fa-plus fa-2x"></em></div>
+                        <div class="col-md-4 col-lg-4 col-xl-4 col-xs-6 col-sm-6 mb-2" wfd-id="19">
+                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal2" wfd-id="20" >
+                                <div class="velvetphp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" wfd-id="21">
+                                    <div class="portfolio-item-caption-content text-center text-white" wfd-id="22"><em class="fas fa-plus fa-2x"></em></div>
                                 </div>
-                                <img class="img-fluid" src="image/lego.png" alt="Velvet Music"/>
+                                <img class="img-fluid" src="image/PHPVelvet.png" alt="Velvet Music">
+                                <h3 class="text-center mt-1">Projet PHP : Velvet Music</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4 col-xs-6 col-sm-6 mb-2" wfd-id="15">
+                            <div class="portfolio-item filter web mx-auto" data-toggle="modal" data-target="#portfolioModal3" wfd-id="16" >
+                                <div class="legophp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" wfd-id="17">
+                                    <div class="portfolio-item-caption-content text-center text-white" wfd-id="18"><em class="fas fa-plus fa-2x"></em></div>
+                                </div>
+                                <img class="img-fluid" src="image/lego.png" alt="Velvet Music">
                                 <h3 class="text-center mt-1">Projet Final Fil Rouge (partie WEB) </h3>
 
                             </div>
                         </div>
-                        <div class="col-4 ">
-                            <div class="portfolio-item  mx-auto filter app" data-toggle="modal" data-target="#portfolioModal4">
-                                <div class="exocpp portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><em
-                                            class="fas fa-plus fa-2x"></em></div>
+                        <div class="col-md-4 col-lg-4 col-xl-4 col-xs-6 col-sm-6 mb-2" wfd-id="10">
+                            <div class="portfolio-item  mx-auto filter app" data-toggle="modal" data-target="#portfolioModal4" wfd-id="11" >
+                                <div class="revit  portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" wfd-id="13">
+                                    <div class="portfolio-item-caption-content text-center text-white" wfd-id="14"><em class="fas fa-plus fa-2x"></em></div>
                                 </div>
-                                <img class="img-fluid" src="image/exoCPP.PNG" alt="Velvet Music"/>
-                                <h3 class="text-center mt-1">Exercices apprentissage C++ autodidacte <span class="badge badge-success now">En cours</span></h3>
+                                <img class="img-fluid" src="image/Revit_Plugin_pres.png" alt="Revit Plugin">
+                                <h3 class="text-center mt-1">Plugin C#: Autodesk Revit</h3>
 
                             </div>
                         </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4 col-xs-6 col-sm-6 mb-2" wfd-id="5">
+                            <div class="portfolio-item  mx-auto filter web app" data-toggle="modal" data-target="#portfolioModal5" wfd-id="11">
+                                <span class="badge badge-success now" wfd-id="12">En cours</span>
+                                <div class="myfavlonks portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" wfd-id="13">
+                                    <div class="portfolio-item-caption-content text-center text-white" wfd-id="14"><em class="fas fa-plus fa-2x"></em></div>
+                                </div>
+                                <img class="img-fluid" src="image/My_Favlonks_Home.PNG" alt="Velvet Music">
+                                <h3 class="text-center mt-1">Projet personnel : My Favlonks </h3>
+
+                            </div>
+                        </div>
+
+                       
 
 
                     </div>
                 </div>
             </div>
         </section>
+        <hr class="m-0">
+        <section class=" resume-section p-3 p-lg-5  desktop content w-100" id="Parcours">
+            <h2 class="mb-5">Parcours</h2>
+            <div class="w-100  container-fluid d-flex align-items-center justify-content-center">
+                
+               
+                <section class="cd-horizontal-timeline">
+                    <div class="timeline" id="timeline">
+                        <div class="events-wrapper" id="events-wrapper">
+                            <div class="events">
+                                <ol id="elmnts">
+                                    <li><a href="#0" data-date="01/01/2016" class="selected">2016</a></li>
+                                    <li><a href="#0" data-date="01/01/2017">2017</a></li>
+                                    <li><a href="#0" data-date="01/01/2018">2018</a></li>
+                                    <li><a href="#0" data-date="01/01/2019">2019</a></li>
+                                    <li><a href="#0" data-date="01/01/2020">2020</a></li>
+                                    <li><a href="#0" data-date="01/01/2021">2021</a></li>
+                                    
+                                    
+                                </ol>
+                                
+                
+                                <span class="filling-line" aria-hidden="true"></span>
+                                <canvas id='sprite-anim'></canvas>
+                            </div>
+                            <!-- .events -->
+                        </div> <!-- .events-wrapper -->
+                            
+                    </div> <!-- .timeline -->
+                    <div class="events-content">
+                        <ol>
+                            <li class="selected" data-date="01/01/2016">
+                                <div class="row">
+                                    <div class="col-5 offset-1">
+                                        <section>
+                                            <h1>Formation</h1>
+                                                <h4>BTS - LYCEE SAINT-ASPAIS, MELUN</h4>
+                                                <em class="timeline-em">Services informatiques aux organisations</em>
+                                                <p class="timeline-p">Option Solutions Logicielles et Application Métiers</p>
+                                        </section>
+                                    </div>
+                                    <div class="col-6">
+                                            <section>
+                                                <h1>Langages</h1>
+                                                <div class="row ml-2 mb-2">
+                                                    <i class="fab fa-php"></i>
+                                                    <i class="fas fa-database ml-4"></i><h4 class="pt-3 ml-2"> SQL </h4>
+                                                    <i class="fab fa-cuttlefish ml-4">#</i>
+                                                    </div>
+                                                <div class="row ml-2"> 
+                                                    <i class="fab fa-html5"></i><h4 class="pt-3 ml-2">HTML 5</h4>
+                                                    <i class="fab fa-css3-alt ml-4"></i><h4 class="pt-3 ml-2">CSS 2</h4>
+                                               </div>
+                                                <p></p>
+                                            </section>
+                                    </div>
+                                </div>
+                            </li>
+                
+                            <li data-date="01/01/2017">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <section class="mb-3">
+                                        <h1>Expériences</h1>
+                                        <h4>Développeur web - Excalibra, PARIS</h4>
+                                        <em class="timeline-em">Réalisation de sites internet vitrines avec le CMS WordPress</em>
+                                        <em class="timeline-em">Modification de l’existant</em>
+                                        <em class="timeline-em">Réalisation de documents techniques</em>
+                                        
+                                        </section>
+                                        <section>
+                                            <h1>Formation</h1>
+                                                <h4>MASTERE - IPSSI, PARIS</h4>
+                                                <em class="timeline-em">Mastère 1 Administrateur du S.I</em>
+                                                <p class="timeline-p">filière Développement web, mobile et logiciel</p>
+                                        </section>
+                                    </div>
+                                    <div class="col-6">
+                                       
+                                            <section>
+                                                <h1>Langages</h1>
+                                                <div class="row mb-2 ml-2">
+                                                    <i class="fab fa-php"></i>
+                                                    <i class="fas fa-database ml-4"></i><h4 class="pt-3 ml-2"> SQL </h4>
+                                                    <i class="fab fa-html5 ml-4"></i><h4 class="pt-3 ml-2">HTML 5</h4>
+                                                </div>
+                                                <div class="row ml-2">
+                                                    <i class="fab fa-css3-alt"></i><h4 class="pt-3 ml-2">CSS 2</h4>
+                                                    <i class="fab fa-js-square ml-4"></i><h4 class="pt-3 ml-2"> Javascript </h4>
+                                                </div>
+                                            </section>
+                                            <section>
+                                                <h1>Outils</h1>
+                                                <div class="row ml-2">
+                                                <i class="fab fa-wordpress"></i>
+                                                </div>
+                                            </section>
+                                    </div>
+                                </div>
+                            </li>
+                
+                            <li data-date="01/01/2018">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <section class="mb-3">
+                                        <h1>Expériences</h1>
+                                        <h4>Assistant administratif - Feelnfood, PARIS</h4>
+                                        <em class="timeline-em">Facturation</em>
+                                        <em class="timeline-em">Envoi + suivi des commandes</em>
+                                        <em class="timeline-em">Mise à jour de la trésorerie</em>
+                                        <em class="timeline-em">Analyse des chiffres réalisés</em>
+                                        <em class="timeline-em">Saisie administratif</em>
+                                        
+                                        </section>
+                                        
+                                    </div>
+                                    <div class="col-6">
+                                            <section>
+                                                <h1>Outils</h1>
+                                                <div class="row">
+                                                <i class="fab fa-windows ml-4"></i><h4 class="pt-3 ml-2">Suite Office</h4>
+                                                </div>
+                                            </section>
+                                    </div>
+                                </div>
+                            </li>
+                
+                            <li data-date="01/01/2019">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <section class="mb-3">
+                                        <h1>Expériences</h1>
+                                        <h4>Développeur web - Projet Lego <span class="badge badge-success ml-1">Voir portfolio</span></h4>
+                                        <p>En tant que chef de projet, ma mission était de mener une équipe composée de 4 développeurs à réaliser un site e-commerce sous le Framework de PHP Symfony 4.</p>
+                                        <em class="timeline-em">Réalisation des schémas UML du projet</em>
+                                        <em class="timeline-em">Réalisation du MCD</em>
+                                        <em class="timeline-em">Réalisation de la maquette</em>
+                                        <em class="timeline-em">Création / gestion de la base de données</em>
+                                        <em class="timeline-em">Filtres de recherche</em>
+                                        <em class="timeline-em">Panier avec l'Ajout/Suppression, gestion des quantités</em>
+                                        <em class="timeline-em">Inscription</em>
+                                        <em class="timeline-em">Connexion / Déconnexion</em>
+                                        <em class="timeline-em">Sauvegarde du panier</em>
+                                        <em class="timeline-em">Recherche autocomplète en JS / AJAX</em>
+                                        <em class="timeline-em">Création d'une facture en PDF / DOMPDF</em>
+                                        <em class="timeline-em">Envois de la facture par mail lors de la validation du panier</em>
+                                        <em class="timeline-em">Envois mail 'mot de passe oublié'</em>
+                                        <em class="timeline-em">Création du README</em>
+                                        
+                                        </section>
+                                        <section>
+                                            <h1>Formation</h1>
+                                                <h4>FORMATION PROFESIONNELLES - AFPA, AMIENS</h4>
+                                                <em class="timeline-em">Concepteur Développeur d'Applications</em>
+                                        </section>
+                                    </div>
+                                    <div class="col-6">
+                                       
+                                            <section>
+                                                <h1>Langages</h1>
+                                                <div class="row mb-2 ml-2">
+                                                    <i class="fab fa-php"></i>
+                                                    <i class="fas fa-database ml-4"></i><h4 class="pt-3 ml-2"> SQL </h4>
+                                                    <i class="fab fa-html5 ml-4"></i><h4 class="pt-3 ml-2">HTML 5</h4>
+                                                </div>
+                                                <div class="row ml-2">
+                                                    <i class="fab fa-css3-alt"></i><h4 class="pt-3 ml-2">CSS 2</h4>
+                                                    <i class="fab fa-js-square ml-4"></i><h4 class="pt-3 ml-2"> Javascript </h4>
+                                                    <i class="fab fa-java ml-4"></i><h4 class="pt-3 ml-2"> Java </h4>
+                                                </div>
+                    
+                                            </section>
+                                            <section>
+                                                <h1>Outils</h1>
+                                                <div class="row ml-2">
+                                                
+                                                <i class="fab fa-symfony"></i><h4 class="pt-3 ml-2">Symfony 4</h4>
+                                                <i class="fab fa-github ml-4"></i><h4 class="pt-3 ml-2">Git</h4>
+                                                <i class="fab fa-bootstrap ml-4"></i><h4 class="pt-3 ml-2">Bootstrap</h4>
+                                                </div>
+                                            </section>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-date="01/01/2020">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <section class="mb-3">
+                                        <h1>Expériences</h1>
+                                        <h4>Développeur - Smart Jobsite, Compiègne <span class="badge badge-success ml-1">Voir portfolio</span></h4>
+                                        <p>Au sein de l’équipe recherche et développement de la société, ma mission était la réalisation d’un plugin pour automatiser la création de grue en 3D sur le logiciel Revit.</p>
+                                        <em class="timeline-em">Récupération d’un fichier JSON contenant toutes les pièces de la grue</em>
+                                        <em class="timeline-em">Extraction des données</em>
+                                        <em class="timeline-em">Création automatique d’une famille pour chaque pièce différente</em>
+                                        <em class="timeline-em">Assemblages des différentes familles pour crée la grue</em>
+                                        <em class="timeline-em">Création de différents paramètres pour dynamiser la grue(Longueur, Hauteur …)</em>
+                                        
+                                        </section>
+                                    </div>
+                                    <div class="col-6">
+                                       
+                                            <section>
+                                                <h1>Langages</h1>
+                                                <div class="row mb-2 ml-2">
+                                                    <i class="fab fa-cuttlefish ml-4">#</i>
+                                                </div>
+                                                
+                                            </section>
+                                            <section>
+                                                <h1>Outils</h1>
+                                                <div class="row ml-2">
+                                                    <i class="fab fa-github ml-4"></i><h4 class="pt-3 ml-2">Git</h4>
+                                                    <i class="fas fa-file-code ml-4"></i><h4 class="pt-3 ml-2">Revit</h4>
+                                                    <i class="fas fa-file-code ml-4"></i><h4 class="pt-3 ml-2">Jira</h4>
+                                                
+                                                </div>
+                                            </section>
+                                    </div>
+                                </div>
+                            </li>
+                
 
-        <!-- Modal projet : Exercice JS -->
+                
+                            
+                        </ol>
+                    </div> <!-- .events-content -->
+                </section>
+
+                
+
+            </div>
+        </section>
+        <hr class="m-0">
+        <div class="container-fluid">
+            <section class="resume-section p-3 p-lg-5 content w-100 " id="CV">
+                <h2 class="mb-5">CV</h2>
+                
+                <div class=" cv d-flex align-items-center justify-content-center">
+                    <img src="image/cvJPG.jpg" alt="">
+                </div>
+            </section>
+        </div>  
+
         <div class="modal fade " id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-body">
-                        <img src="image/FormJava.png" alt="exercices JavaScript" class="img-fluid img-modal">
+                        <div class="d-flex justify-content-center modal_body_div">
+
+                            <img src="image/FormJava.png" alt="exercices JavaScript" class="img-fluid img-modal">
+                        </div>
                         <div class="text-center">
                             <p>Plusieurs exercices afin d'apprendre le JavaScript , (Conditionnelles, boucles, tableaux
                                 )</p>
@@ -575,13 +487,43 @@
         </div>
         <!-- Fin modal projet: Exercice JS -->
 
+         <!-- Modal projet : Exercice PHP       -->
+
+         <div class="modal fade " id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center modal_body_div">
+
+                        <img src="image/exoPHP.png" alt="exercices PHP" class="img-fluid img-modal">
+                    </div>
+                    <div class="text-center">
+                        <p>Plusieurs exercices afin d'apprendre le PHP , (Conditionnelles, boucles, tableaux
+                            ....)</p>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-primary"
+                       href="https://github.com/Menthealeau/CDAProjet/tree/master/PHPexo" target="_blank">Voir</a>
+                    <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Retour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  FIN Modal projet : Exercice PHP       -->
+
         <!-- Modal projet : Velvet Music -->
-        <div class="modal fade " id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <div class="modal fade " id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-lg " role="document">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-body">
-                        <img src="image/yGnplOkSXf.gif" alt="exercices PHP" class="img-fluid img-modal">
+                        <div class="d-flex justify-content-center modal_body_div">
+
+                            <img src="image/yGnplOkSXf.gif" alt="exercices PHP" class="img-fluid img-modal">
+                        </div>
                         <div class=" mt-3 ml-1">
                             <ul class="list-unstyled">
                                 <li class="h5">Projet : Création d'un site de présentation de vinyles</li>
@@ -604,12 +546,12 @@
         <!-- Fin modal projet: Velvet Music -->
 
         <!-- Modal projet : Fil Rouge -->
-        <div class="modal fade " id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <div class="modal fade " id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-dark text-white">
-                    <div class="modal-body mb-0 p-0">
-                        <img src="image/presentation.gif" alt="exercices PHP" class="img-fluid img-modal">
+                    <div class="modal-body mb-0 p-0"><div class="d-flex justify-content-center modal_body_div">
+                        <img src="image/presentation.gif" alt="exercices PHP" class="img-fluid img-modal"></div>
                         <div class=" mt-3 ml-1">
                             <ul class="list-unstyled mt-2">
                                 <li class="h5">Projet : Création d'un site E-Commerce en groupe</li>
@@ -630,29 +572,63 @@
         </div>
         <!-- Fin modal projet: Fil Rouge -->
 
-        <!-- Modal projet : Exercice PHP       -->
-        <div class="modal fade " id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <!-- Modal projet : Revit C# -->
+        <div class="modal fade " id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-dark text-white">
-                    <div class="modal-body">
-                        <img src="image/exoPHP.png" alt="exercices PHP" class="img-fluid img-modal">
-                        <div class="text-center">
-                            <p>Plusieurs exercices afin d'apprendre le PHP , (Conditionnelles, boucles, tableaux
-                                ....)</p>
+                    <div class="modal-body mb-0 p-0">
+                        <div class="d-flex justify-content-center modal_body_div">
+                        <img src="image/Revit_Plugin.png" alt="exercices PHP" class="img-fluid img-modal">
+                        </div>  
+                        <div class=" mt-3 ml-1">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h5">Projet : Création d'un plugin pour Revit en C#</li>
+                                <li>Automatiser / Parametrer la création de grue en 3D</li>
+                                <li>Utilisation de GIT pour le Versionning.</li>
+                                <li>API Revit.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="modal-footer justify-content-center">
-                        <a type="button" class="btn btn-primary"
-                           href="https://github.com/Menthealeau/CDAProjet/tree/master/PHPexo" target="_blank">Voir</a>
                         <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Retour</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Fin modal projet: Exercice PHP -->
+        <!-- Fin modal projet: Revit C# -->
 
-        <!-- TODO : modal C++ apprentissage -->
+        <!-- Modal projet : My Favlonks  -->
+        <div class="modal fade " id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center modal_body_div">
+                        <img src="image/My_favlonks.gif" alt="exercices PHP" class="img-fluid img-modal">
+                        </div>
+                        <div class=" mt-3 ml-1">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h5">Projet : Création Web App gestionnaire de favoris</li>
+                                <li>Langages : PHP POO (Laravel 8), CSS (Bulma), Vuejs</li>
+                                <li>Trier les favoris par catégories</li>
+                                <li>Recherche autocomplete d'un lien a l'aide de sa description</li>
+                                <li>Gestion des liens Drag & Drop</li>
+                                <li>Partage de projets avec les utilisateurs</li>
+                                <li>Extension internet pour rajouter un lien d'un clique</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <a type="button" class="btn btn-primary"
+                           href="https://github.com/Menthealeau/my_favlonk" target="_blank">Voir</a>
+                        <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Retour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin modal projet : My Favlonks  -->
+        
     </section>
 
 </div>
@@ -665,7 +641,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://use.fontawesome.com/releases/v5.13.0/js/conflict-detection.js"></script>
+<script src="particles.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/anim.js"></script>
+<script src="js/timeline.js"></script>
 <script type="text/javascript" src="js/perso.js"></script>
 </body>
 </html>

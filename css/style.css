@@ -68,12 +68,12 @@
 
 /*Changement de couleur au passage de la souris*/
 #sidebar ul li a:hover {
-    color: #f8b739;
+    font-weight: bold;
 }
 
 #sidebar ul li.active > a {
     background: transparent;
-    color: #f8b739;
+    font-weight: bold;
 }
 
 .list-unstyled {
@@ -104,16 +104,17 @@
 
     width: 100%;
     height: 100vh;
-    background-image: url("../image/dev.jpg");
     background-size: cover;
+    background-color:#1b1f49;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 50% 50%;
 
 }
 
 .presentation {
     background-color: #383d41;
-    opacity: 0.9;
+    opacity: 0.75;
+    position: absolute;
     color: white;
 }
 
@@ -140,7 +141,7 @@
 section.resume-section {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
-    max-width: 75rem;
+    position: relative;
 }
 
 .text-primary {
@@ -231,7 +232,6 @@ i {
 }
 
 .social-icons > a:hover {
-    color: #824027;
 
 }
 
@@ -256,7 +256,10 @@ i {
     text-transform: uppercase;
     font-size: 3.5rem;
     color: #BD5D38 !important;
+    border-bottom: 0.4rem solid #59F2FB;
+    width: 300px;
 }
+
 
 .front, .back {
     background: #844127;
@@ -275,4 +278,26 @@ em{
 .codewars
 {
     width: 120%;
+}
+
+.fab:hover,.far:hover,.fa:hover,.fas:hover{
+    transform: scale(1.7);
+}
+
+.cv > img{
+    
+    border-radius: 40px;
+    box-shadow: 15px 15px 14px -7px rgba(110,97,97,0.66);
+-webkit-box-shadow: 15px 15px 14px -7px rgba(110,97,97,0.66);
+-moz-box-shadow: 15px 15px 14px -7px rgba(110,97,97,0.66);
+}
+
+#sprite-anim {
+    position: absolute;
+    left: 150px;
+}
+
+.img-fluid {
+    height : 16rem;
+    width : 100%;
 }
