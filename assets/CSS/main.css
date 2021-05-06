@@ -1,0 +1,146 @@
+/* General */
+
+@font-face {
+    font-family: "Saira Extra Condensed";
+    src: url('../Fonts/SairaExtraCondensed-Regular.ttf');
+}
+
+@font-face {
+
+    font-family: "Muli";
+    src: url('../Fonts/Muli.ttf')
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;     
+}
+
+body {
+    font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+}
+
+
+h1 {
+    font-size: 40px;
+    line-height: 48px;
+    text-size-adjust: 100%;
+    
+}
+
+.logo {
+
+    font-weight: 500;
+}
+
+a:link, a {
+
+    text-decoration:none;
+    color:white;
+}
+
+section
+{
+
+    margin:40px 20px;
+}
+
+i 
+{
+    color:black;
+    font-size:30px;
+}
+
+li 
+{
+    list-style: none;
+}
+
+H1:not(.logo , .logomobile) {
+    color: #BD5D38;
+}
+
+.badge {
+
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #28a745;
+    padding: 5px 5px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+.title
+{
+    margin-bottom: 25px;
+    border-bottom: 0.4rem solid #59F2FB;
+    width: 40%;
+}
+
+@media all and (min-width: 1280px)
+{
+        .accueil {
+
+            min-height: 100vh;
+        }
+
+        .title {
+
+            width:10%;
+        }
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+    .title {
+
+        width:10%;
+    }
+
+    .exp > h2 > .badge {
+
+        
+        right: auto;
+        bottom: 0;
+    }
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+}
+
+@media all and (max-width: 480px) {
+
+    
+}
+
+
+
+
+
+
+
+      
+

@@ -1,0 +1,417 @@
+.card
+{
+    
+    margin: 10px 10px;
+    border-radius : 20px;
+    position: relative;
+   
+}
+
+.card > i
+{
+    display: none;
+    position : absolute;
+    top: 45%;
+    left: 45%;
+    font-size:3rem ;
+    color:white;
+}
+
+
+
+.card > img ,  .modal-header > img {
+
+    max-width: 100%;
+	height: auto;
+    border-radius : 20px;
+}
+.card > h2  
+{
+    text-align: center;
+    
+}
+
+/*  #Region Cards Hover */
+
+
+
+
+.active {
+
+    background-color: white !important;
+    color: #BD5D38 !important;
+    border: 1px solid #BD5D38 !important;
+}
+
+
+.portfolio
+{
+    margin-top: 50px;
+    display:block !important;
+    max-width : 100%;
+}
+
+.portfolio-choices {
+    display:flex;
+    justify-content: center;
+    
+}
+.portfolio-choices > button {
+    
+    background-color: #BD5D38;
+    color:white;
+    border-radius: 20px;
+    width: 17.5vw;
+    height:4.5vh;
+    margin:0 3px;
+    border:none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+  }
+
+
+
+.portfolio-items
+{
+    margin-top:25px;
+}
+
+.modal {
+    overscroll-behavior-y: contain;
+  display:none;
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,.9); /* Fallback color */
+}
+.modal-content
+{
+    background-color: #343a40;
+    margin: auto auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    color:white;
+    
+
+}
+.modal-body, .modal-footer
+{
+    margin:5px 3px;
+}
+
+.bouton-voir, .bouton-retour {
+
+    padding : 10px 20px;
+}
+
+
+
+.bouton-voir {
+
+    background-color:#007bff;
+    border-radius: 10px;
+}
+
+
+
+.close {
+    color:white;
+    right: 0;
+    font-size: 29px;
+    position: absolute;
+    font-weight: bolder;
+    background-color:rgba(0,0,0,.6);
+    border-top-right-radius: 20px;
+}
+
+
+.modal-footer {
+
+    display:flex;
+    justify-content: space-evenly;
+}
+
+/* #region Animation */
+
+.animationmodalopen {
+    
+    animation: modalanimationopen 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-animation :  modalanimationopen 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.animationmodalclose 
+{
+    animation: modalanimationclose 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-animation :  modalanimationclose 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes modalanimationopen {
+
+    from {transform: scale(0);opacity: 0;}
+    to {transform: scale(1); opacity:1;}
+}
+
+@-webkit-keyframes modalanimationopen {
+    from {transform: scale(0);opacity: 0;}
+    to {transform: scale(1); opacity:1;}
+}
+
+@keyframes modalanimationclose {
+
+    from {transform: scale(1);opacity: 1;}
+    to {transform: scale(0); opacity:0;}
+}
+
+@-webkit-keyframes modalanimationclose {
+    from {transform: scale(1);opacity: 1;}
+    to {transform: scale(0); opacity:0;}
+}
+/* #endregion */
+
+/* #region media queries */
+
+@media all and (min-width: 1280px)
+{
+    .portfolio-items
+    {
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card 
+    {
+        display:block;
+        max-width:30%;
+        cursor:pointer;
+    }
+
+    .modal-content
+    {
+        left:0;
+        right:0;
+        width:70%;
+    }
+    #js:hover
+    {
+        background-image: url('../Image/code_exoJS.PNG');
+    }
+    #php:hover
+    {
+        background-image: url('../Image/code_exoPHP.PNG');
+    }
+    #cpp:hover
+    {
+        background-image: url('../Image/code_cpp.PNG');
+    }
+    #velvet:hover
+    {
+        background-image: url('../Image/code_velvetPHP.PNG');
+    }
+    #lego:hover
+    {
+        background-image: url('../Image/code_lego.PNG');
+    }
+    #revit:hover
+    {
+        background-image: url('../Image/Revit_Plugin_code.png');
+    }
+    #favlonks:hover
+    {
+        background-image: url('../Image/My_Favlonks_code.PNG');
+    }
+    
+    .card:hover 
+    {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all .7s ease-in-out;
+        display: inline;
+    }
+    .card:hover > img, .card:hover >h2{
+    
+        opacity: 0;
+    }
+    
+    .card:hover >i 
+    {
+        display:block;
+    }
+}
+
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+    .portfolio-items
+    {
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card 
+    {
+        display:block;
+        max-width:30%;
+    }
+
+    .modal-content
+    {
+        left:0;
+        right:0;
+        width:70%;
+    }
+    #js:hover
+{
+    background-image: url('../Image/code_exoJS.PNG');
+}
+#php:hover
+{
+    background-image: url('../Image/code_exoPHP.PNG');
+}
+#cpp:hover
+{
+    background-image: url('../Image/code_cpp.PNG');
+}
+#velvet:hover
+{
+    background-image: url('../Image/code_velvetPHP.PNG');
+}
+#lego:hover
+{
+    background-image: url('../Image/code_lego.PNG');
+}
+#revit:hover
+{
+    background-image: url('../Image/Revit_Plugin_code.png');
+}
+#favlonks:hover
+{
+    background-image: url('../Image/My_Favlonks_code.PNG');
+}
+
+.card:hover 
+{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .7s ease-in-out;
+    display: inline;
+}
+.card:hover > img, .card:hover >h2{
+
+    opacity: 0;
+}
+
+.card:hover >i 
+{
+    display:block;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    .portfolio-items
+    {
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card 
+    {
+        display:block;
+        max-width:30%;
+    }
+
+    .modal-content
+    {
+        left:0;
+        right:0;
+        width:70%;
+    }
+    #js:hover
+{
+    background-image: url('../Image/code_exoJS.PNG');
+}
+#php:hover
+{
+    background-image: url('../Image/code_exoPHP.PNG');
+}
+#cpp:hover
+{
+    background-image: url('../Image/code_cpp.PNG');
+}
+#velvet:hover
+{
+    background-image: url('../Image/code_velvetPHP.PNG');
+}
+#lego:hover
+{
+    background-image: url('../Image/code_lego.PNG');
+}
+#revit:hover
+{
+    background-image: url('../Image/Revit_Plugin_code.png');
+}
+#favlonks:hover
+{
+    background-image: url('../Image/My_Favlonks_code.PNG');
+}
+
+.card:hover 
+{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .7s ease-in-out;
+    display: inline;
+}
+.card:hover > img, .card:hover >h2{
+
+    opacity: 0;
+}
+
+.card:hover >i 
+{
+    display:block;
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    .portfolio-items
+    {
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card 
+    {
+        display:block;
+        max-width:40%;
+    }
+
+    .modal-content
+    {
+        left:0;
+        right:0;
+        width:70%;
+    }
+    
+}
+
+@media all and (max-width: 480px) {
+      
+}
+
+/* #endregion */

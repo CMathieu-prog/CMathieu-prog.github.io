@@ -1,0 +1,20 @@
+.imgcv > img{
+
+    border-radius: 30px;
+    box-shadow: 15px 15px 14px -7px rgb(110 97 97 / 66%);
+    -webkit-box-shadow: 15px 15px 14px -7px rgb(110 97 97 / 66%);
+    max-width: 100%;
+	height: auto;
+    
+}
+.imgcv 
+{
+    display: flex;
+    justify-content:center;
+    padding: 65px;
+}
+
+.CV 
+{
+   height: 80vh;
+}

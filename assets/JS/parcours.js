@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	var timelines = $('.cd-horizontal-timeline'),
+	var timelines = $('.parcours'),
 		eventsMinDistance = 70;
 
 	(timelines.length > 0) && initTimeline(timelines);
@@ -9,14 +9,14 @@ jQuery(document).ready(function($){
 			var timeline = $(this),
 				timelineComponents = {};
 			//cache timeline components 
-			timelineComponents['timelineWrapper'] = timeline.find('.events-wrapper');
-			timelineComponents['eventsWrapper'] = timelineComponents['timelineWrapper'].children('.events');
+			timelineComponents['timelineWrapper'] = timeline.find('.date-content');
+			timelineComponents['eventsWrapper'] = timelineComponents['timelineWrapper'].children('.date-list');
 			timelineComponents['fillingLine'] = timelineComponents['eventsWrapper'].children('.filling-line');
 			timelineComponents['timelineEvents'] = timelineComponents['eventsWrapper'].find('a');
 			timelineComponents['timelineDates'] = parseDate(timelineComponents['timelineEvents']);
 			timelineComponents['eventsMinLapse'] = minLapse(timelineComponents['timelineDates']);
 			timelineComponents['timelineNavigation'] = timeline.find('.cd-timeline-navigation');
-			timelineComponents['eventsContent'] = timeline.children('.events-content');
+			timelineComponents['eventsContent'] = timeline.children('.timeline-content');
 
 			//assign a left postion to the single events along the timeline
 			setDatePosition(timelineComponents, eventsMinDistance);
@@ -35,60 +35,11 @@ jQuery(document).ready(function($){
 				updateVisibleContent($(this), timelineComponents['eventsContent']);
 			});
 
-			//on swipe, show next/prev event content
-			timelineComponents['eventsContent'].on('swipeleft', function(){
-				var mq = checkMQ();
-				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'next');
-			});
-			timelineComponents['eventsContent'].on('swiperight', function(){
-				var mq = checkMQ();
-				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'prev');
-			});
 
 		
 		});
 	}
 
-	function showNewContent(timelineComponents, timelineTotWidth, string) {
-		//go from one event to the next/previous one
-		var visibleContent =  timelineComponents['eventsContent'].find('.selected'),
-			newContent = ( string == 'next' ) ? visibleContent.next() : visibleContent.prev();
-
-		if ( newContent.length > 0 ) { //if there's a next/prev event - show it
-			var selectedDate = timelineComponents['eventsWrapper'].find('.selected'),
-				newEvent = ( string == 'next' ) ? selectedDate.parent('li').next('li').children('a') : selectedDate.parent('li').prev('li').children('a');
-			
-			updateFilling(newEvent, timelineComponents['fillingLine'], timelineTotWidth);
-			updateVisibleContent(newEvent, timelineComponents['eventsContent']);
-			newEvent.addClass('selected');
-			selectedDate.removeClass('selected');
-			updateOlderEvents(newEvent);
-			updateTimelinePosition(string, newEvent, timelineComponents, timelineTotWidth);
-		}
-	}
-
-	function updateTimelinePosition(string, event, timelineComponents, timelineTotWidth) {
-		//translate timeline to the left/right according to the position of the selected event
-		var eventStyle = window.getComputedStyle(event.get(0), null),
-			eventLeft = Number(eventStyle.getPropertyValue("left").replace('px', '')),
-			timelineWidth = Number(timelineComponents['timelineWrapper'].css('width').replace('px', '')),
-			timelineTotWidth = Number(timelineComponents['eventsWrapper'].css('width').replace('px', ''));
-		var timelineTranslate = getTranslateValue(timelineComponents['eventsWrapper']);
-
-        if( (string == 'next' && eventLeft > timelineWidth - timelineTranslate) || (string == 'prev' && eventLeft < - timelineTranslate) ) {
-        	translateTimeline(timelineComponents, - eventLeft + timelineWidth/2, timelineWidth - timelineTotWidth);
-        }
-	}
-
-	function translateTimeline(timelineComponents, value, totWidth) {
-		var eventsWrapper = timelineComponents['eventsWrapper'].get(0);
-		value = (value > 0) ? 0 : value; //only negative translate value
-		value = ( !(typeof totWidth === 'undefined') &&  value < totWidth ) ? totWidth : value; //do not translate more than timeline width
-		setTransformValue(eventsWrapper, 'translateX', value+'px');
-		//update navigation arrows visibility
-		(value == 0 ) ? timelineComponents['timelineNavigation'].find('.prev').addClass('inactive') : timelineComponents['timelineNavigation'].find('.prev').removeClass('inactive');
-		(value == totWidth ) ? timelineComponents['timelineNavigation'].find('.next').addClass('inactive') : timelineComponents['timelineNavigation'].find('.next').removeClass('inactive');
-	}
 
 	function updateFilling(selectedEvent, filling, totWidth) {
 		//change .filling-line length according to the selected event
@@ -101,7 +52,7 @@ jQuery(document).ready(function($){
 	}
 
 	function setDatePosition(timelineComponents, min) {
-		for (i = 0; i < timelineComponents['timelineDates'].length; i++) { 
+		for (let i = 0; i < timelineComponents['timelineDates'].length; i++) { 
 		    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
 		    	distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
 		    timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
@@ -123,7 +74,7 @@ jQuery(document).ready(function($){
 		var eventDate = event.data('date'),
 			visibleContent = eventsContent.find('.selected'),
 			selectedContent = eventsContent.find('[data-date="'+ eventDate +'"]'),
-			selectedContentHeight = selectedContent.height();
+			selectedContentHeight = selectedContent.height()+30;
 
 		if (selectedContent.index() > visibleContent.index()) {
 			var classEnetering = 'selected enter-right',
@@ -143,26 +94,6 @@ jQuery(document).ready(function($){
 
 	function updateOlderEvents(event) {
 		event.parent('li').prevAll('li').children('a').addClass('older-event').end().end().nextAll('li').children('a').removeClass('older-event');
-	}
-
-	function getTranslateValue(timeline) {
-		var timelineStyle = window.getComputedStyle(timeline.get(0), null),
-			timelineTranslate = timelineStyle.getPropertyValue("-webkit-transform") ||
-         		timelineStyle.getPropertyValue("-moz-transform") ||
-         		timelineStyle.getPropertyValue("-ms-transform") ||
-         		timelineStyle.getPropertyValue("-o-transform") ||
-         		timelineStyle.getPropertyValue("transform");
-
-        if( timelineTranslate.indexOf('(') >=0 ) {
-        	var timelineTranslate = timelineTranslate.split('(')[1];
-    		timelineTranslate = timelineTranslate.split(')')[0];
-    		timelineTranslate = timelineTranslate.split(',');
-    		var translateValue = timelineTranslate[4];
-        } else {
-        	var translateValue = 0;
-        }
-
-        return Number(translateValue);
 	}
 
 	function setTransformValue(element, property, value) {
@@ -191,15 +122,10 @@ jQuery(document).ready(function($){
 	function minLapse(dates) {
 		//determine the minimum distance among events
 		var dateDistances = [];
-		for (i = 1; i < dates.length; i++) { 
+		for (let i = 1; i < dates.length; i++) { 
 		    var distance = daydiff(dates[i-1], dates[i]);
 		    dateDistances.push(distance);
 		}
 		return Math.min.apply(null, dateDistances);
-	}
-
-	function checkMQ() {
-		//check if mobile or desktop device
-		return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
 	}
 });

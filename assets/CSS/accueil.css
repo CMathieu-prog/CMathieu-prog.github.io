@@ -1,0 +1,100 @@
+.accueil 
+ {
+    position : relative;
+    display : none;
+    justify-content: center;
+    align-items: center;
+    margin : 0 0;
+    background-size: cover;
+    background-color:#1b1f49;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+ }
+
+.presentation {
+    
+    text-align: center;
+    background-color: #383d41;
+    opacity: 0.75;
+    color: #fff;
+    z-index: 1;
+    width:600px;
+    border-radius: 20px;
+    padding: 10px 0;
+
+
+ }
+
+ .svg-wrapper {
+    position: relative;
+    margin: auto auto;
+    margin-top:10px;
+    width: 320px;
+}
+.shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    fill: transparent;
+    stroke: #19f6e8;
+    border-bottom: 5px solid black;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 8px;
+    color: #fff;
+    top: -48px;
+    position: relative;
+    z-index: 3;
+}
+.svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
+.shape {
+height: 60px;
+    width: 320px;
+}
+.particles-js-canvas-el
+{
+    width: 100%;
+    height:100%;
+    left:0;
+}
+
+@media all and (min-width: 1280px)
+{
+
+    .accueil 
+    {
+        display: flex;
+    }
+
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    
+    .accueil 
+    {
+        display: flex;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    
+}
+
+@media all and (max-width: 480px) {
+
+    
+}

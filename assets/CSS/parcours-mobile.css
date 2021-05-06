@@ -1,0 +1,438 @@
+
+
+/* #region Desktop  */
+.parcours {
+    display: none;
+    opacity: 0;
+    margin: 2em auto;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+
+}
+
+.parcours.loaded {
+
+    opacity: 1;
+  width: inherit;
+}
+
+.parcours .timeline
+{
+    position: relative;
+    height: 100px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.parcours .date-content {
+
+    position: relative;
+    height: 100%;
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.parcours .date-content::after,.parcours .date-content::before {
+
+    content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+
+}
+
+.parcours .date-content::after 
+{
+    right: 0;
+    background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+    background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+
+.parcours .date-content::before
+{
+    left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+
+.parcours .date-list {
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 49px;
+    height: 2px;
+    background: #dfdfdf;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.parcours .filling-line 
+{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #BD5D38;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.parcours .date-list a {
+
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 1.3rem;
+    padding-bottom: 15px;
+    color: #383838;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.parcours .date-list a::after {
+
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -5px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #dfdfdf;
+    background-color: #f8f8f8;
+    -webkit-transition: background-color 0.3s, border-color 0.3s;
+    -moz-transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.parcours .date-list a.selected {
+
+    pointer-events: none;
+}
+
+.parcours .date-list a.selected::after {
+
+    background-color: #BD5D38;
+    border-color: #BD5D38;
+}
+
+.parcours .date-list a.older-event::after {
+
+    border-color: #BD5D38;
+}
+
+.parcours .parcours-content {
+
+    position: relative;
+    width: 100%;
+    margin: 2em 0;
+    overflow: hidden;
+    -webkit-transition: height 0.4s;
+    -moz-transition: height 0.4s;
+    transition: height 0.4s;
+}
+
+.parcours .parcours-content li 
+{
+    position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  padding: 0 5%;
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+
+.parcours .parcours-content li.selected {
+
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.parcours .parcours-content li.enter-right, .parcours .parcours-content li.leave-right
+{
+    -webkit-animation-name: cd-enter-right;
+    -moz-animation-name: cd-enter-right;
+    animation-name: cd-enter-right;
+}
+
+
+.parcours .parcours-content li.enter-left, .parcours .parcours-content li.leave-left
+{
+    -webkit-animation-name: cd-enter-left;
+    -moz-animation-name: cd-enter-left;
+    animation-name: cd-enter-left; 
+}
+
+.parcours .parcours-content li.leave-right , .parcours .parcours-content li.leave-left
+
+{
+    -webkit-animation-direction: reverse;
+    -moz-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.parcours .parcours-content li > * 
+{
+    margin : 0 auto;
+}
+
+/* #endregion */
+
+
+/* #region mobile */
+.parcours-mobile {
+
+    display:none;
+}
+.experience>h3, .langages> h3, .formation>h3, .outil>h3
+{
+    color: #1b1f49;
+}
+
+.description
+{
+    color:grey;
+    line-height:1rem;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+
+}
+
+.experience >p:not(.description)::before,.formation>p
+{
+    content: " - ";
+}
+
+.experience>h3>span {
+
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #28a745;
+    margin: auto auto;
+}
+
+.parcours-content 
+{
+    margin:10px 10px;
+    
+}
+
+.animationopen 
+{
+    -webkit-animation-name: animationopen;
+    -webkit-animation-duration: 1s;
+    animation-name: animationopen;
+    animation-duration: 1s;
+}
+
+.animationclose 
+{
+    -webkit-animation-name: animationclose;
+    -webkit-animation-duration: 1s;
+    animation-name: animationclose;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes animationopen
+{
+    from{max-height: 0;opacity: 0;}
+    to {max-height: 750px;opacity: 1;}
+}
+
+@keyframes animationopen
+{
+    from{max-height: 0;opacity: 0;}
+    to {max-height: 750px;opacity: 1;}
+}
+
+@-webkit-keyframes animationclose
+{
+    from{max-height: 750px;opacity: 1;}
+    to {max-height: 0;opacity: 0;}
+}
+
+@keyframes animationclose
+{
+    from{max-height: 750px;opacity: 1;}
+    to {max-height: 0;opacity: 0;}
+}
+
+.parcours-content>*
+{
+    width: 100%;
+    
+}
+
+.parcours-content>div:first-child
+{
+    
+    padding: 10px 10px;
+    margin: 10px 10px;
+    margin-bottom: 0;
+    border: 2px solid #BD5D38 !important;
+    
+    border-right: 0 !important;
+    
+}
+
+.parcours-content>div:nth-child(even)
+{
+    
+    border-right:2px solid #BD5D38;
+    border-bottom: 2px solid #BD5D38;
+    padding: 10px 10px;
+    margin: 0px 10px;
+}
+.parcours-content>div:nth-child(odd)
+{
+
+    padding: 10px 10px;
+    margin: 0 10px;
+    border: 2px solid #BD5D38;
+    border-right: 0;
+    border-top:0;
+}
+
+
+
+.langages > h3, .outil > h3
+{
+    text-align: right;
+}
+
+.parcours-content {
+    display: none;
+}
+.parcours-mobile > h2 > i {
+
+    font-size: 20px;
+    margin: auto auto;
+}
+
+.year {
+
+    text-align: center;
+}
+
+.langage-container, [class^="outils-container"]
+{
+    display:flex;
+    margin-top:5px;
+    width: 100%;
+    justify-content:center;
+}
+.langage-container:first-of-type, .outils-container-main
+{
+    justify-content:space-between;
+
+}
+.langage-container > h5, [class^="outils-container"]>h5
+{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.langage-container:not(:first-of-type) > h5, .outils-container-secondary > h5
+{
+    margin-left:5px;
+}
+
+/* #endregion */
+
+/* #region Media_queries  */
+
+
+@media all and (min-width: 1280px)
+{
+    .parcours {
+        display : block;
+    }
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .parcours {
+        display : block;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .parcours {
+        display : block;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    .parcours-mobile {
+
+        display:block !important;
+    
+      }
+}
+
+@media all and (max-width: 480px) {
+
+    .parcours-mobile {
+
+        display:block !important;
+    
+      }
+}
+/* #endregion */
