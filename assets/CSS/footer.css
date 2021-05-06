@@ -15,7 +15,7 @@ footer
 .tel {
   display:flex;
 }
-.tel > p
+.tel > a > p
 {
   color:#BD5D38;
 }
