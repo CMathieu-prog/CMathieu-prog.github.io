@@ -4,7 +4,7 @@
     box-shadow: 15px 15px 14px -7px rgb(110 97 97 / 66%);
     -webkit-box-shadow: 15px 15px 14px -7px rgb(110 97 97 / 66%);
     max-width: 100%;
-	height: auto;
+	height: 95%;
     
 }
 .imgcv 
@@ -29,7 +29,8 @@
 
     .imgcv 
     {
-        padding: 20%;
+        padding: 5%;
+        height: 100vh;
     }
 }
 
@@ -38,5 +39,6 @@
       .imgcv 
       {
           padding: 5%;
+          height: 100vh;
       }
 }
